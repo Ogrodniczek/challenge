@@ -1,0 +1,21 @@
+nginx:
+    build: ./nginx
+    links:
+        - featureserver1:featureserver1
+        - featureserver2:featureserver2
+    ports:
+        - "80:80"
+featureserver1:
+    build: ./featureserver
+    ports:
+        - "5000"
+featureserver2:
+    build: ./featureserver
+    ports:
+        - "5000"
+
+postgis:
+    image: mdillon/postgis
+    environment:
+        - POSTGRES_PASSWORD=mysecretpassword
+
