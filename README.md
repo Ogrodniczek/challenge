@@ -1,9 +1,11 @@
 ## Setup how-to
 
-1. Create .env file with postgre password:
+1. Create .env file with postgres password:
+
 POSTGRES_PASSWORD={password}
 
 2. Build images:
+
 ```docker-compose -f docker-compose.yml -f docker-compose.seed.yml build```
 
 * docker-compose.seed.yml is only needed to initialize example data for featureserver, you can skip it if you want to have empty database.
