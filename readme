@@ -1,3 +1,6 @@
 https://github.com/awentzonline/featureserver
 https://github.com/msanand/docker-workflow
 http://geoalchemy.readthedocs.io/en/latest/featureserver.html
+
+
+psql -U admin -h localhost -f towns.sql
