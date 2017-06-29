@@ -1,0 +1,13 @@
+version: "2"
+services:
+    query:
+        build: ./data-seed
+        command: sh -c 'export PGPASSWORD=${POSTGRES_PASSWORD}; exec psql -h postgis -U admin -f towns.sql'
+        #command: sh -c 'exec psql -h localhost -p 5432 -U postgres'
+        links:
+            - postgis
+        environment:
+            - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+        env_file:
+            - .env
+ 

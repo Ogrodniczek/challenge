@@ -25,11 +25,3 @@ services:
             - POSTGRES_USER=admin
             - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
 
-
-#query:
-#    image: postgres
-#    links:
-#        - postgis
-#    stdin_open: true
-#    tty: true
-#    command: sh -c 'exec psql -h $${POSTGIS_1_PORT_5432_TCP_ADDR} -p $${POSTGIS_1_PORT_5432_TCP_PORT} -U postgres'
