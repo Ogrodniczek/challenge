@@ -4,17 +4,18 @@
 POSTGRES_PASSWORD={password}
 
 2. Build images:
-docker-compose -f docker-compose.yml -f docker-compose.seed.yml build
+```docker-compose -f docker-compose.yml -f docker-compose.seed.yml build```
 
 * docker-compose.seed.yml is only needed to initialize example data for featureserver, you can skip it if you want to have empty database.
 3. Run the stack:
 
 
-a) docker-compose -f docker-compose.yml -f docker-compose.seed.yml up
+``` docker-compose -f docker-compose.yml -f docker-compose.seed.yml up```
 
 * you may need to add docker-compose.seed.yml only for the first run, after that you can use:
 
-b) docker-compose up
+``` docker-compose up```
+
 
 
 
