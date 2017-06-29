@@ -1,3 +1,4 @@
+version: "3"
 nginx:
     build: ./nginx
     links:
@@ -11,14 +12,12 @@ featureserver1:
         - "8080"
     links:
         - postgis:postgis
-
 featureserver2:
     build: ./featureserver
     ports:
         - "8080"
     links:
         - postgis:postgis
-
 postgis:
     image: mdillon/postgis
     environment:
