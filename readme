@@ -4,3 +4,7 @@ http://geoalchemy.readthedocs.io/en/latest/featureserver.html
 
 
 psql -U admin -h localhost -f towns.sql
+
+
+Bugs:
+- password to db is in plaintext in docker-compose
