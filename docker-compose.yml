@@ -2,28 +2,30 @@ version: "2"
 services:
     nginx:
         build: ./nginx
-        links:
-            - featureserver1:featureserver1
-            - featureserver2:featureserver2
+        depends_on:
+            - featureserver1
+            - featureserver2
         ports:
             - "80:80"
     featureserver1:
         build: ./featureserver
-        ports:
-            - "8080"
-        links:
-            - postgis:postgis
+        depends_on:
+            - postgis
+        env_file:
+            - .env
     featureserver2:
         build: ./featureserver
-        ports:
-            - "8080"
-        links:
-            - postgis:postgis
+        depends_on:
+            - postgis
+        env_file:
+            - .env
     postgis:
         image: mdillon/postgis
         environment:
             - POSTGRES_USER=admin
-            - POSTGRES_PASSWORD=mysecretpassword
+            - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+
+
 #query:
 #    image: postgres
 #    links:
