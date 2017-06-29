@@ -18,15 +18,19 @@ POSTGRES_PASSWORD={password}
 
 ``` docker-compose up```
 
+4. Use the stack:
 
+$ curl http://localhost/mylayer/all.json
 
 
 ## Info/docs
 
 
 Used materials:
+```
 https://github.com/awentzonline/featureserver
 https://github.com/msanand/docker-workflow
 http://geoalchemy.readthedocs.io/en/latest/featureserver.html
+```
 
 
