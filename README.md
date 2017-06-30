@@ -2,7 +2,10 @@
 
 1. Create .env file with postgres password:
 
-POSTGRES_PASSWORD={password}
+POSTGRES_PASSWORD=password
+POSTGRES_USER=value
+
+Example .env file is included in the repository, you may want to change values there.
 
 2. Build images:
 

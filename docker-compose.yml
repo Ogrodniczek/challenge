@@ -20,8 +20,6 @@ services:
         env_file:
             - .env
     postgis:
-        image: mdillon/postgis
-        environment:
-            - POSTGRES_USER=admin
-            - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
-
+        image: mdillon/postgis:9.6
+        env_file:
+            - .env
